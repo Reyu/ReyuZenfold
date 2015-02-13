@@ -1,0 +1,52 @@
+# This file contains a list of extended regular expressions, one per
+# line. A file path matching any of these expressions will be filtered
+# out during `darcs add', or when the `--look-for-adds' flag is passed
+# to `darcs whatsnew' and `record'.  The entries in ~/.darcs/boring (if
+# it exists) supplement those in this file.
+#
+# Blank lines, and lines beginning with an octothorpe (#) are ignored.
+# See regex(7) for a description of extended regular expressions.
+
+### yesod generated ignores (from .gitignore)
+^dist(/|$)
+^static/(tmp|combined)(/|$)
+^config/client_session_key\.aes$
+\.hi$
+\.o
+\.sqlite3
+^\.hsenv
+^(cabal|yesod)-devel(/|$)
+^\.cabal-sandbox(/|$)
+^cabal\.sandbox\.config$
+
+
+### version control systems
+# git
+(^|/)\.git($|/)
+# darcs
+(^|/)_darcs($|/)
+(^|/)\.darcsrepo($|/)
+^\.darcs-temp-mail$
+-darcs-backup[[:digit:]]+$
+
+### miscellaneous
+# backup files
+~$
+\.swp$
+\.bak$
+\.BAK$
+# patch originals and rejects
+\.orig$
+\.rej$
+# image spam
+\#
+(^|/)Thumbs\.db$
+# vi, emacs tags
+(^|/)(tags|TAGS)$
+#(^|/)\.[^/]
+# core dumps
+(^|/|\.)core$
+# partial broken files (KIO copy operations)
+\.part$
+# mac os finder
+(^|/)\.DS_Store$
